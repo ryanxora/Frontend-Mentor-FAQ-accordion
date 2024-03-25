@@ -1,0 +1,142 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    font-family: "Work Sans", sans-serif;
+}
+
+:root{
+    --White: hsl(0, 0%, 100%);
+    --Light-pink: hsl(275, 100%, 97%);
+    --Grayish-purple: hsl(292, 16%, 49%);
+    --Dark-purple: hsl(292, 42%, 14%);
+
+    --fw-400 : 400;
+    --fw-600 : 600;
+    --fw-700 : 700;
+
+    --br : 10px;
+}
+
+p{
+    font-size: 16px;
+}
+
+.wrap{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: var(--Light-pink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-img{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    max-width: 100%;
+}
+
+.faq-wrap{
+    width: 500px;
+    height: auto;
+    min-height: 300px;
+    background-color: var(--White);
+    z-index: 1;
+    border-radius: var(--br);
+    padding: 2rem 1.5rem;
+}
+
+.faq-name{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.faq-name img{
+    width: 27px;
+    aspect-ratio: 1/1;
+}
+
+.faq-name h1{
+    color: var(--Dark-purple);
+}
+
+.faq-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.faq-section .faq-q{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+
+
+.faq-section .faq-q p{
+    cursor: pointer;
+    font-weight: var(--fw-700);
+    color: var(--Dark-purple);
+}
+
+.faq-section .faq-q:hover .queastion{
+    color: var(--Grayish-purple);
+}
+
+.faq-section .faq-q img{
+    cursor: pointer;
+}
+
+.faq-section .faq-a {
+    display: none;
+    width: 100%;
+    margin: 1rem 0px;
+    color: var(--Grayish-purple);
+    overflow: hidden; 
+    max-height: 0; 
+    transition: max-height 0.3s ease; 
+}
+
+.faq-section .faq-a.active {
+    display: block;
+    max-height: 1000px; 
+    transition: max-height 0.3s ease; 
+}
+
+
+.line-break{
+    width: 100%;
+    height: 2px;
+    background-color: var(--Light-pink);
+    margin: 1rem 0px;
+}
+
+
+
+/* mobile */
+
+@media screen and (max-width : 760px) {
+    .faq-wrap{
+        width: 90%;
+    }
+    .bg-img{
+        top: 0%;
+        right: 0%;
+        height: 40vh;
+        object-fit: cover;
+        object-position: center;
+    }
+}
